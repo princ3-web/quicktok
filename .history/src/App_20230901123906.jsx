@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import { useMediaQuery } from "@material-ui/core";
 import Navbar from "./components/Navbar";
 import Bottombar from "./components/Bottombar";
-import Desktop from "./components/Desktop";
 import { createTheme, ThemeProvider, Box } from "@mui/material";
 
 function App() {
@@ -32,7 +31,7 @@ function App() {
   return (
     <Box>
       <ThemeProvider theme={theme}>
-        {isMobile ?
+        {isMobile &&
           <Box>
             <Navbar />
             <Routes>
@@ -40,9 +39,6 @@ function App() {
             </Routes>
             <Bottombar />
           </Box>
-
-          :
-          <Desktop />
         }
       </ThemeProvider>
     </Box>

@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import { useMediaQuery } from "@material-ui/core";
 import Navbar from "./components/Navbar";
 import Bottombar from "./components/Bottombar";
-import Desktop from "./components/Desktop";
 import { createTheme, ThemeProvider, Box } from "@mui/material";
 
 function App() {
@@ -27,22 +26,18 @@ function App() {
         fontWeight: 600,
       },
     },
+  
   });
 
   return (
     <Box>
       <ThemeProvider theme={theme}>
-        {isMobile ?
-          <Box>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home isMobile={isMobile} />} />
-            </Routes>
-            <Bottombar />
-          </Box>
-
-          :
-          <Desktop />
+       {<Box> <Navbar />
+        <Routes>
+          <Route path="/" element={<Home isMobile={isMobile} />} />
+        </Routes>
+        <Bottombar />
+        </Box>
         }
       </ThemeProvider>
     </Box>

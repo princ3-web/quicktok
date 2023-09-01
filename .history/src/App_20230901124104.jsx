@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import { useMediaQuery } from "@material-ui/core";
 import Navbar from "./components/Navbar";
 import Bottombar from "./components/Bottombar";
-import Desktop from "./components/Desktop";
+import Desk
 import { createTheme, ThemeProvider, Box } from "@mui/material";
 
 function App() {
